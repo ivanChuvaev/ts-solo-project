@@ -1,0 +1,254 @@
+:root {
+  --foreground-color: #ffffff;
+  --background-color: #213547;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark light;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+
+body {
+  color: var(--foreground-color);
+  background: var(--background-color);
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100dvh;
+  background-color: #DFDBE5;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.root-nav-link.active {
+  color: white !important;
+}
+
+.dcontainer {
+  width: 600px;
+  margin: 0 auto;
+}
+
+
+@media screen and (min-width: 1300px) {
+  .dcontainer {
+    width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dcontainer {
+    width: 900px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .dcontainer {
+    width: 650px;
+  }
+}
+
+.dnav-link {
+  color: wheat;
+  transition: 100ms;
+}
+
+.dnav-link:hover {
+  color: rgb(247, 209, 138);
+}
+
+.dnav-link.active {
+  color: rgb(255, 255, 255);
+}
+
+.header-nav-bar {
+  display: flex;
+  height: 100%;
+  gap: 10px;
+  align-items: center;
+}
+
+.header-nav-bar .dnav-link {
+  padding: 15px 10px;
+  line-height: 1;
+  border-radius: 8px;
+}
+
+.header-nav-bar .dnav-link.active {
+  background: rgba(255, 255, 255, 0.096);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-color: #213547;
+    --background-color: #e6e6e6;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+.search-bar-floating {
+  display: none;
+  background: white;
+  border-radius: 4px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.search-bar-floating.open {
+  display: block;
+}
+
+.home-page {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search-bar-floating-message {
+  text-align: center;
+  color: #acacac;
+}
+
+.search-bar-floating-list-item {
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.search-bar-floating-list-item:hover {
+  background: rgb(230, 230, 230);
+}
+
+
+.search-bar-floating-list-item:first-child {
+  padding-top: 0;
+}
+
+.search-bar-floating-list-item:last-child {
+  padding-bottom: 0;
+}
+
+.current-place-info-condition {
+  float: right;
+  text-align: right;
+}
+
+.current-place-info-condition-image {
+  border-radius: 4px;
+}
+
+.cookie-warning {
+  rotate: 90deg;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  transform: translate(0, -100%);
+  width: 100vh;
+  transform-origin: top left;
+  background: rgb(231, 231, 231);
+  transition: 1s transform;
+  display: flex;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+.cookie-warning-text {
+  flex: 1 1 0%;
+}
+
+.cookie-warning-actions {
+  display: flex;
+  gap: 10px;
+  flex-grow: 0;
+}
+
+.cookie-warning.open {
+  transform: translate(0, 0%);
+}
+
+.current-place-info-hours-carousel {
+  margin: 10px 0;
+  border-radius: 4px;
+  /* background: #c4c4c4; */
+  padding: 20px;
+}
+
+.current-place-info-hours-carousel-chunk {
+  display: flex !important;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.current-place-time {
+  text-align: center;
+  /* font-weight: 700; */
+}
+
+.current-place-carousel-chunk-item {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.slick-dots > li button {
+  background: rgb(83, 83, 83) !important;
+}
+
+.slick-arrow {
+  background: rgb(226, 226, 226) !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: 700;
+}
